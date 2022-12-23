@@ -1,0 +1,73 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow: hidden;
+  /* background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  ); */
+  background-color: #454545;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+/* WHITE KEYS */
+.white-notes-container {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 3;
+  display: flex;
+}
+.white-keys {
+  width: 5rem;
+  height: 20rem;
+  background-color: white;
+  outline: 2px black solid;
+}
+.white-keys:hover {
+  background-color: #ececec;
+  cursor: pointer;
+}
+.white-keys:active {
+  background-color: #d9d9d9;
+}
+
+/* BLACK KEYS */
+.black-notes-container {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 3;
+  margin-bottom: 8rem;
+  display: flex;
+  column-gap: 2.5rem;
+  margin-right: 5rem;
+}
+.black-keys {
+  width: 2.5rem;
+  height: 12rem;
+  background-color: black;
+}
+
+.black-keys:nth-child(3) {
+  visibility: hidden;
+  pointer-events: none;
+}
+.black-keys:hover {
+  cursor: pointer;
+  background-color: #1a1a1a;
+}
+.black-keys:active {
+  background-color: #454545;
+}
